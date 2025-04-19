@@ -1,0 +1,313 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.container {
+    height: auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 'encabezado'
+                         'proyectos'
+                         'experiencia'
+                         'educacion'
+                         'pie';
+    grid-template-rows: 150px 50px 50px 300px 200px;
+    grid-template-columns: 1fr;
+}
+
+.avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top: 10px;
+}
+.banner{
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+}
+.container-hijo1 {
+    grid-area: encabezado;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+.icon{
+    margin: auto;
+}
+.layout{
+    opacity: 0.5; 
+    margin-bottom: 10px;
+}
+.caja2 {
+    grid-area: proyectos;
+}   
+.navproyectos{
+    display: none;
+}
+.tituloprojects{
+    border-bottom: solid 2px black;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin-top: 15px;
+}
+.caja2 ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.caja2 ul li{
+    display: flex;
+    background-color:rgb(181, 180, 180);
+    text-align: center;
+    height: 30px;
+    justify-content: center;
+}
+.caja3 {
+    grid-area: experiencia;
+}
+.caja4 {
+    grid-area: educacion;
+    height: 100%;
+}
+.caja5 {
+    grid-area: pie;
+    border-top: solid 2px rgb(11, 11, 10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.container-hijo4-1, .container-hijo4-2 {
+    display: none;
+}
+
+.lista{
+    display: flex;
+    list-style: none;
+}
+
+.lista li{
+    padding: 10px;
+}
+.profesion{
+    font-size: 16px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: 700;
+}
+button{
+all: unset;
+width:100% ; 
+}
+.navproyectos{
+    width: 100%;
+}
+
+.experience{
+    border-bottom: solid 2px black;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.container-hijo2{
+    display: none;
+}
+
+
+.container-hijo2-1, .container-hijo2-2{
+    background-color: rgb(181, 180, 180);
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-left:20px ;
+    padding-top: 10px;
+    border-bottom: solid 2px black;
+    height: 110px;
+}   
+.tituloEducation{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.navEducation{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 40px;
+    padding-top: 10px;
+    height: 100px;
+}
+.Graduate{
+    padding: 0px 0px 20px 20px;
+}
+.courses{
+    padding-left: 20px;
+}
+
+.container-hijo3{
+height: 90%;
+}
+
+.Reviews{
+text-align: center;
+padding-top: 20px;
+}
+.container-hijo4{
+    border: solid 2px black;
+    border-radius: 30px;;
+    width: 330px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+
+.nombre{
+    padding-top: 10px;
+    opacity: 0.5;
+    font-size: 16px;
+}
+.asistente{
+    opacity: 0.5;
+    font-size: 16px;
+}
+
+
+li>button:hover{
+    cursor: pointer;
+    background-color: royalblue;
+}
+
+
+/* *** Responsive **/ 
+
+@media screen and (min-width: 768px) {
+     .container {
+        height: 100vh;
+        grid-template-areas: 'encabezado encabezado encabezado'
+                             'proyectos experiencia educacion'
+                             'pie pie pie';
+        grid-template-rows: 250px 350px 300px;
+        grid-template-columns: 20% 50% 30%; 
+    } 
+
+    .tituloprojects{
+        width: 100%;
+        text-align: center;
+        height: 25px;
+    
+        border-bottom:none ;
+    }
+    .caja2{
+      border-right: solid 2px black;
+    }
+  
+    .caja4{
+        border-left: solid 2px black;
+    } 
+    .tituloEducation{
+        padding-top: 20px;
+    }
+    .container-hijo2{
+        display: block;
+    }
+    .navproyectos{
+        display: block;
+    }
+    .experience{
+        border-bottom: none;
+        padding-top: 5px;
+    }
+   .navEducation{
+    border: none;
+   }
+   .caja2 ul li{
+    background-color:rgb(250, 250, 248);
+    border: 1px solid rgb(15, 15, 15);
+    border-right: none;;
+    padding: 20px;
+}
+.caja2 ul li:first-child{
+    border-top: none;
+    border-left: none;
+}
+.caja2 ul li:last-child{
+    border-bottom: none;
+    border-left: none;
+}
+
+.container-hijo2-1, .container-hijo2-2{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-left:20px ;
+    padding-top: 20px;
+    height: 155px;
+}   
+
+.container-hijo2 div:last-child
+{
+    border-bottom: none;
+}
+
+
+.container-hijo4-1, .container-hijo4-2 {
+    display: block;
+    border: solid 2px black;
+    border-radius: 30px;;
+    width: 330px;
+    height: 120px;
+    padding: 20px 20px;
+}
+
+.padres-1{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+
+}
+.Reviews{
+   width: 100%;
+   text-align: left;
+   padding-left: 20px;
+}
+.contenedor{
+    width: 100%;
+
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    height: 50px;
+}
+.lista{
+    display: flex;
+    align-items: center;
+}
+.avatar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.banner{
+justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 100%;
+}
+.profesion{
+    font-size: 40px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: 700;}
+}
